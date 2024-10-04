@@ -1,9 +1,7 @@
 let selectedButton = null;
 let indexNum = 0; 
 // get current question, be able to change question
-const resultBar = document.getElementById("result-bar");
 const question = document.getElementById("question");
-const quizClass = document.querySelector(".quiz");
 const questionList = ["Test Question 1", "Test Question 2", "Test Question 3"];
 let questionNum = 0; 
 let score = 0; 
@@ -44,7 +42,13 @@ document.getElementById('next_button').addEventListener('click', () => {
         button.classList.remove('selected');
     })
     if (questionNum == questionList.length){
-        window.location.href = "/results.html";
+        console.log("switch")
+        let quiz = document.getElementById("quiz");
+        let results = document.getElementById("results");
+        let resultsBar = document.getElementById("results-bar");
+        quiz.style.display = "none";
+        results.style.display = "block";
+
     }
-   
+    console.log(score);
 })
