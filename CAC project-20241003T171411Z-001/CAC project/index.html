@@ -8,9 +8,8 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-
-    <div class = "app">
-        <div id = "quiz">
+    <div class="app">
+        <div id="quiz">
             <h1>Mental Health Quiz</h1>
             <h2 id="question">Sample Question</h2>
             <div id="answer-buttons">
@@ -21,9 +20,15 @@
             </div>
             <button id="next_button">Next</button>
         </div>
-        <div id = "results">
+        <div id="results">
           <h1>Your Results</h1>
-          <div id = "results-bar"></div>
+          <div class="progress-dial">
+            <div class="needle"></div> 
+            <svg class="progress-ring" width="150" height="75">
+              <circle class="progress-ring__background" stroke="#e0e0e0" stroke-width="12" fill="transparent" r="60" cx="75" cy="75"/>
+              <circle class="progress-ring__circle" stroke="#007aff" stroke-width="12" fill="transparent" r="60" cx="75" cy="75"/>
+            </svg>
+          </div>
         </div>
     </div>
     <script src="script.js"></script>
