@@ -45,8 +45,19 @@ document.getElementById('next_button').addEventListener('click', () => {
         console.log("switch")
         let quiz = document.getElementById("quiz");
         let results = document.getElementById("results");
-        let resultsBar = document.getElementById("results-bar");
+        let resultsImage = document.getElementById("results-image");
+        let resultsText = document.getElementById("results-text");
         quiz.style.display = "none";
+        if(score == 9){
+            resultsImage.src = "images/100_chart.png";
+            resultsText.textContent = "PLACEHOLDER 100%";
+        } else if(score > 6){
+            resultsImage.src = "images/66_chart.png";
+            resultsText.textContent = "PLACEHOLDER 66%";
+        } else {
+            resultsImage.src = "images/33_chart.png";
+            resultsText.textContent = "PLACEHOLDER 33%";
+        }
         results.style.display = "block";
 
     }
