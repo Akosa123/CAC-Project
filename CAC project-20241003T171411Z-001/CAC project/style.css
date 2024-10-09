@@ -96,19 +96,23 @@ h2 {
 .progress-ring__circle, .progress-ring__background {
     transition: stroke-dashoffset 0.35s;
     transform: rotate(-180deg); 
-    transform-origin: 50% 100%; 
+    transform-origin: % 100%; 
 }
 
 .progress-ring__background {
-    stroke-dasharray: 188.5;
+    stroke-dasharray: 2000;
 }
 
 .progress-ring__circle {
     stroke-dasharray: 188.5; 
     stroke-dashoffset: 188.5; 
 }
-
-
+bottom;
+    transform: rotate(-90deg); 
+    transition: transform 0.35s;
+    left: 50%;
+    top: 10px; 
+}
 
 @media (max-width: 768px) {
     .app {
