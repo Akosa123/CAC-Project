@@ -28,6 +28,10 @@ function updateProgressDial(scorePercentage) {
     circle.style.strokeDasharray = `${circumference} ${circumference}`;
     const offset = circumference - (scorePercentage / 100) * circumference;
     circle.style.strokeDashoffset = offset;
+
+    const needle = document.querySelector('.needle');
+    const needleRotation = (-90 + (scorePercentage / 100) * 180); 
+    needle.style.transform = `rotate(${needleRotation}deg)`;
 }
 
 // on next_button click, call function next() 
@@ -65,3 +69,4 @@ document.getElementById('next_button').addEventListener('click', () => {
 
     indexNum = 0;
 });
+
