@@ -1,4 +1,5 @@
-# Created as part of the 2024 Congressional App Challenge by 
+# Created as part of the 2024 Congressional App Challenge
+### Programmers: 
 * Ryan Herber
 * Akash Kongara
 * Marcus Garcia
