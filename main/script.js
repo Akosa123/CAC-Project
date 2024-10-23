@@ -22,7 +22,7 @@ const questionList = [
     "I have been sad or unhappy more days than not.",
     "I have felt empty inside most of the time.",
     "I have repeatedly felt that others would be better off without me.",
-    "I have Repeatedly felt that I was a failure"
+    "I have repeatedly felt that I was a failure"
 ];
 let questionNum = 0; 
 let score = 0; 
