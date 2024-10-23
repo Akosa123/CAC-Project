@@ -65,8 +65,8 @@ document.getElementById('next_button').addEventListener('click', () => {
         // get all result + quiz elements to change 
         let quiz = document.getElementById("quiz");
         let results = document.getElementById("results");
-        let resultsImage = document.getElementById("results-image");
-
+        let resultsImage = document.getElementById("resultsImage");
+        let resultsText = document.getElementById("resultsText")
         // hide quiz div
         quiz.style.display = "none";
         
@@ -102,6 +102,11 @@ document.getElementById('next_button').addEventListener('click', () => {
             resultsImage.src = "images/7chart.png";
         } else {
             resultsImage.src = "images/0chart.png";
+        }
+        if(scorePercentage > 50){
+            resultsText.textContent = "You may be showing signs of depression";
+        } else {
+            resultsText.textContent = "You do not show severe signs of depression";
         }
         // show results div
         results.style.display = "block";
