@@ -97,6 +97,7 @@ h2 {
 footer{
     text-align: center;
     color: white;
+    margin: auto auto 1% 1%;
 }
 ul{
     font-size: 24px;
