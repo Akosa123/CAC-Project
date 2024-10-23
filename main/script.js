@@ -71,7 +71,7 @@ document.getElementById('next_button').addEventListener('click', () => {
         quiz.style.display = "none";
         
         // display image based on scorePercentage TODO: add text
-        let scorePercentage = (score/(questionList.length*3))*100;
+        let scorePercentage = (score/(questionList.length*2))*100;
         if(scorePercentage > 98){
             resultsImage.src = "images/100chart.png";
         } else if(scorePercentage > 91){
