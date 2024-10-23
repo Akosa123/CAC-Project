@@ -105,6 +105,7 @@ ul{
     padding-top: 2%;
     margin-bottom: 25px;
     text-align: center;
+    list-style-type: none;
 }
 /* media request TODO: add new media requests */
 @media (max-width: 768px) {

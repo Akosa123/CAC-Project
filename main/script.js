@@ -8,21 +8,21 @@ const question = document.getElementById("question");
 const questionList = [
     "I feel sad.",
     "I feel discouraged about the future.",
-    "I don’t sleep as well as I used to.",
+    "I sleep too long or not enough.",
     "I feel like a failure.",
     "I believe that I look ugly.",
     "I feel guilty.",
     "I have thoughts of killing myself.",
-    "I cry more now than I used to.",
+    "I cry often for what seems like insignificant reasons",
     "I often find myself overthinking simple tasks.",
-    "I have gained or lost a significant amount of weight.",
-    "I have repeatedly felt that my life will never get better.",
-    "I have repeatedly thought about my past mistakes.",
-    "I have repeatedly blamed myself for every setback that happened to me.",
-    "I have been sad or unhappy more days than not.",
-    "I have felt empty inside most of the time.",
-    "I have repeatedly felt that others would be better off without me.",
-    "I have repeatedly felt that I was a failure"
+    "My weight fluctuates often.",
+    "I feel that my life will not get any better.",
+    "I repeatedly think about past mistakes",
+    "I repeatedly think about all the bad things that may happen to me.",
+    "I feel sad, discouraged or generally down.",
+    "I feel empty inside most of the time.",
+    "I repeatedly feel that others would be better off without me.",
+    "I repeadtedly feel that I am a failure. "
 ];
 let questionNum = 0; 
 let score = 0; 
