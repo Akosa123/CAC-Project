@@ -1,11 +1,29 @@
 // button "selected" functionality
 let selectedButton = null;
 let indexNum = 0; 
-
+const scores = [3, 2, 1, 0];
 // question functionality + question List (edit this for adding more questions) 
 // + score var TODO: Add more questions / add real questions
 const question = document.getElementById("question");
-const questionList = ["Test Question 1", "Test Question 2", "Test Question 3"];
+const questionList = [
+    "I feel sad.",
+    "I feel discouraged about the future.",
+    "I don’t sleep as well as I used to.",
+    "I feel like a failure.",
+    "I believe that I look ugly.",
+    "I feel guilty.",
+    "I have thoughts of killing myself.",
+    "I cry more now than I used to.",
+    "I often find myself overthinking simple tasks.",
+    "I have gained or lost a significant amount of weight.",
+    "I have repeatedly felt that my life will never get better.",
+    "I have repeatedly thought about my past mistakes.",
+    "I have repeatedly blamed myself for every setback that happened to me.",
+    "I have been sad or unhappy more days than not.",
+    "I have felt empty inside most of the time.",
+    "I have repeatedly felt that others would be better off without me.",
+    "I have Repeatedly felt that I was a failure"
+];
 let questionNum = 0; 
 let score = 0; 
 
@@ -32,19 +50,11 @@ document.querySelectorAll(".btn").forEach((button, index) => {
 document.getElementById('next_button').addEventListener('click', () => {
     // determine which score to add based on current button selected
     if(indexNum != null){
-        if (indexNum == 1){
-            score += 3; 
-            questionNum++;
-        } else if (indexNum == 2){
-            score += 2;
-            questionNum++;
-        } else if (indexNum == 3){
-            score += 1;
-            questionNum++;
-        } else{
-            questionNum++;
-        }
+        score += scores[indexNum];
+        questionNum++;
         indexNum = null;
+    } else {
+        alert("Please select an answer to the question");
     }
     question.textContent = questionList[questionNum];
     
@@ -56,7 +66,6 @@ document.getElementById('next_button').addEventListener('click', () => {
         let quiz = document.getElementById("quiz");
         let results = document.getElementById("results");
         let resultsImage = document.getElementById("results-image");
-        let resultsText = document.getElementById("results-text");
 
         // hide quiz div
         quiz.style.display = "none";
@@ -65,51 +74,35 @@ document.getElementById('next_button').addEventListener('click', () => {
         let scorePercentage = (score/(questionList.length*3))*100;
         if(scorePercentage > 98){
             resultsImage.src = "images/100chart.png";
-            resultsText.textContent = "placeholder 100%";
         } else if(scorePercentage > 91){
             resultsImage.src = "images/91chart.png";
-            resultsText.textContent = "placeholder 91%";
         } else if(scorePercentage > 84){
             resultsImage.src = "images/84chart.png";
-            resultsText.textContent = "placeholder 84%";
         } else if(scorePercentage > 77){
             resultsImage.src = "images/77chart.png";
-            resultsText.textContent = "placeholder 77%";
         } else if(scorePercentage > 70){
             resultsImage.src = "images/70chart.png";
-            resultsText.textContent = "placeholder 70%";
         } else if(scorePercentage > 63){
             resultsImage.src = "images/63chart.png";
-            resultsText.textContent = "placeholder 63%";
         } else if(scorePercentage > 56){
             resultsImage.src = "images/56chart.png";
-            resultsText.textContent = "placeholder 56%";
         } else if(scorePercentage > 49){
             resultsImage.src = "images/49chart.png";
-            resultsText.textContent = "placeholder 49%";
         } else if(scorePercentage > 42){
             resultsImage.src = "images/42chart.png";
-            resultsText.textContent = "placeholder 42%";
         } else if(scorePercentage > 35){
             resultsImage.src = "images/35chart.png";
-            resultsText.textContent = "placeholder 35%";
         } else if(scorePercentage > 28){
             resultsImage.src = "images/28chart.png";
-            resultsText.textContent = "placeholder 28%";
         } else if(scorePercentage > 21){
             resultsImage.src = "images/21chart.png";
-            resultsText.textContent = "placeholder 21%";
         } else if(scorePercentage > 14){
             resultsImage.src = "images/14chart.png";
-            resultsText.textContent = "placeholder 14%";
         } else if(scorePercentage > 7){
             resultsImage.src = "images/7chart.png";
-            resultsText.textContent = "placeholder 7%";
         } else {
             resultsImage.src = "images/0chart.png";
-            resultsText.textContent = "placeholder 0%";
         }
-
         // show results div
         results.style.display = "block";
     }

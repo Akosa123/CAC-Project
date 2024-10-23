@@ -61,11 +61,11 @@ h2 {
 .btn.selected {
     background-color: #484848; 
 }
-.btn:hover {
+.btn:hover, .btn:focus {
     background-color: #484848; 
     transform: scale(1.02);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
-
 #next_button {
     display: block;
     margin: 50px auto 0;
@@ -93,7 +93,16 @@ h2 {
     margin-right: auto;
     width: 80%;
 }
-
+h3{
+    font-size: medium;
+}
+ul{
+    font-size: 24px;
+    color: #e0e0e0; 
+    padding-top: 2%;
+    margin-bottom: 25px;
+    text-align: center;
+}
 /* media request TODO: add new media requests */
 @media (max-width: 768px) {
     .app {
