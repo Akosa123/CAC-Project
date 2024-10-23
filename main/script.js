@@ -1,7 +1,7 @@
 // button "selected" functionality
 let selectedButton = null;
 let indexNum = 0; 
-const scores = [3, 2, 1, 0];
+const scores = [3,2,1,0];
 // question functionality + question List (edit this for adding more questions) 
 // + score var TODO: Add more questions / add real questions
 const question = document.getElementById("question");
@@ -15,7 +15,7 @@ const questionList = [
     "I have thoughts of killing myself.",
     "I cry often for what seems like insignificant reasons",
     "I often find myself overthinking simple tasks.",
-    "My weight fluctuates often.",
+    "My weight fluctuates.",
     "I feel that my life will not get any better.",
     "I repeatedly think about past mistakes",
     "I repeatedly think about all the bad things that may happen to me.",
@@ -42,7 +42,7 @@ document.querySelectorAll(".btn").forEach((button, index) => {
         button.classList.add('selected');
         selectedButton = button;
         // iterate to which button is selected
-        indexNum = index + 1;  
+        indexNum = index;  
     });
 });
 
@@ -51,6 +51,7 @@ document.getElementById('next_button').addEventListener('click', () => {
     // determine which score to add based on current button selected
     if(indexNum != null){
         score += scores[indexNum];
+        console.log(score +" "+indexNum);
         questionNum++;
         indexNum = null;
     } else {
